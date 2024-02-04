@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Week3 {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        char[] ans = a.toCharArray();
+        if(a.length()%2 != 0){
+        for(int i = 0; i < ((a.length())/2)+1; i++){
+         for(int j =0; j < (a.length()); j++){
+            if(j == i){
+               System.out.print(ans[i]);
+            }
+            else if(j == (a.length()-i-1)){
+               System.out.print(ans[(a.length())-i-1]);
+            }
+            else{
+               System.out.print(" ");
+            }
+         }
+         System.out.println();
+        }
+
+
+        for(int i = 0; i < ((a.length())/2); i++){
+         for(int j =0; j < (a.length()); j++){
+            if(j == ((a.length())/2)-i-1){
+               System.out.print(ans[((a.length())/2)-i-1]);
+            }
+            else if(j == (((a.length())/2)-i-1)+2*i+2){
+               System.out.print(ans[((a.length())/2)+i+1]);
+            }
+            else{
+               System.out.print(" ");
+            }
+         }
+         System.out.println();
+        }
+      }
+
+      else{
+         System.out.println("Invalid word input");
+      }
+    }
+}
