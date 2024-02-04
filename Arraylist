@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Collections;
+public class don{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String w = sc.nextLine();
+        String word = w.toUpperCase();
+        ArrayList<Character> charList = new ArrayList<>();
+        
+        for(int i = 0; i < word.length(); i++){
+            if(charList.contains(word.charAt(i))){
+                continue;
+            }
+            else{
+                charList.add(word.charAt(i));
+            }
+        }
+        
+        Collections.sort(charList);
+        for(int i = 0; i < charList.size(); i++){
+            System.out.print(charList.get(i));
+            System.out.print(" ");
+            
+        }
+    }
+}
