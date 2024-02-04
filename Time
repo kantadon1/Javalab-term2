@@ -1,0 +1,23 @@
+import java.util.*;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int h=sc.nextInt();
+        String m=sc.next();
+        String ap = sc.next();
+        if(h==12&&ap.equals("am")){
+            System.out.print("00:"+m);
+        }
+        else if(ap.equals("am")){
+            System.out.printf("%02d:%s",h,m);
+        }
+        else if(h==12&&ap.equals("pm")){
+            System.out.print(h+":"+m);
+        }
+        else{
+            h+=12;
+            System.out.print(h+":"+m);
+        }
+    }
+}
