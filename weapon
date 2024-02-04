@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class Week3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count = sc.nextInt();
+        int sword = 10;
+        int sheild = 8;
+        int armor = 3;
+        int swordcollect = 0;
+        int sheildcollect = 0;
+        int armorcollect = 0;
+
+        while(count > 21){
+             
+            if(count - sword >= 0){
+                count -= sword;
+                swordcollect++;
+                
+             }
+
+             if(count - sheild >= 0){
+                count -= sheild;
+                sheildcollect++;    
+             }
+
+             if(count - armor >= 0){
+                count -= armor;
+                armorcollect++;
+             }
+        }
+
+        if(count < 21){
+         while(count - sword >= 0){
+            count -= sword;
+            swordcollect++;
+            
+         }
+
+         while(count - sheild >= 0){
+            count -= sheild;
+            sheildcollect++;    
+         }
+
+         while(count - armor >= 0){
+            count -= armor;
+            armorcollect++;
+         }
+        }
+
+        System.out.println(swordcollect + " " + sheildcollect + " " + armorcollect + " " +count);
+
+
+    }
+}
