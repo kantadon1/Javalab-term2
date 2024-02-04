@@ -1,0 +1,45 @@
+import java.util.Scanner;
+ 
+public class Main{
+
+    public static void main(String args[]){
+
+        Scanner sc = new Scanner(System.in);
+
+        String n = sc.next();
+
+        int m = sc.nextInt();
+
+        int x = 1;
+
+        while(true){
+
+            if((x * x) >= m){
+
+                System.out.println(n);
+
+                break;
+
+            }else if(m <= (x * (x + 1))){
+
+                if(n.equals("A")){
+
+                    System.out.println("B");
+
+                }else{
+
+                    System.out.println("A");
+
+                }
+
+                break;
+
+            }
+
+            x += 1;
+
+        }
+
+    }
+
+}
