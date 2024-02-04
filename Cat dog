@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String word = sc.nextLine();
+        char[] ans = word.toCharArray();
+        int cat = 0;
+        int dog = 0;
+        if(ans.length > 2){
+         for(int i = 0; i < ans.length -2 ; i++){
+                if(ans[i]== 'c' ){
+                    if(ans[i+1] == 'a'){
+                      if(ans[i+2] == 't'){
+                          cat ++;
+                      }
+                    }
+              }
+              if(ans[i] == 'd'){
+                  if(ans[i+1] == 'o'){
+                      if(ans[i+2] == 'g'){
+                          dog ++;
+                      }
+                    }
+               }             
+        }
+        if(cat == dog){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+        }
+    
+
+        else{
+            System.out.println("true");
+        }
+        //tried to usse substring.
+}
+}
